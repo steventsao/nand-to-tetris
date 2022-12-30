@@ -15,6 +15,7 @@ CHIP Bit {
 
     PARTS:
         // Note all the parts are not concerned with ordering that I'm used to in sequential logic.
+        // Referenced https://github.com/havivha/Nand2Tetris/blob/master/03/a/Bit.hdl
 
         // Identity
         Or(a=dffout, b=false, out=out);
