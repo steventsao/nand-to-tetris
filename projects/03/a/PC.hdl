@@ -16,5 +16,6 @@ CHIP PC {
     OUT out[16];
 
     PARTS:
+    Inc16(in=in, out=out);
     // Put your code here:
 }
