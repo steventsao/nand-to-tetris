@@ -14,5 +14,12 @@ CHIP Bit {
     OUT out;
 
     PARTS:
-    // Put your code here:
+        // Note all the parts are not concerned with ordering that I'm used to in sequential logic.
+
+        // Identity
+        Or(a=dffout, b=false, out=out);
+        // Use either input or the last dffout
+        Mux(a=dffout, b=in, sel=load, out=muxout);
+        // Set muxout as current
+        DFF(in=muxout, out=dffout);
 }
